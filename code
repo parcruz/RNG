@@ -9,6 +9,11 @@ export default function App() {
 const onGenerateRandom = () => {
   setRandnum(Math.floor(Math.random() * 100)); 
 }
+
+const onPressHelloWorld = () => {
+  setRandnum("hello world!")
+}
+
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>{randnum}</Text>
@@ -17,10 +22,19 @@ const onGenerateRandom = () => {
         title="Generate number"
         color="#841584"
         accessibilityLabel="Learn more about this purple button"
+        />
+        <Button
+      onPress={onPressHelloWorld}
+        title="Say Hello"
+        color="#841584"
+        accessibilityLabel="Learn more about this purple button"
       />
     </View>
   );
 }
+
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -36,4 +50,3 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
-
